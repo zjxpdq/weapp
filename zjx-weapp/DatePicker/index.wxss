@@ -1,0 +1,18 @@
+/* components/DatePicker.wxss */
+.z-dp {
+
+}
+
+.z-dp-actions {
+  padding: 0 74rpx;
+  height: 676rpx;
+}
+
+.z-dp-active-item {
+  height: 96rpx;
+  line-height: 96rpx;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

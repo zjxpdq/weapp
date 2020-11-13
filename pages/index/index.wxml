@@ -1,0 +1,112 @@
+<!--index.wxml-->
+
+
+<z-steps active="{{ 1 }}" direction="vertical">
+  <z-step title="NO1" content="内容"/>
+  <z-step>
+    <view slot="title">我是头部</view>
+  </z-step>
+</z-steps>
+
+<i-steps direction="vertical">
+  <i-step status="finish">
+    <view slot="title">
+      已完成
+    </view>
+    <view slot="content">
+      这里是该步骤的描述信息
+    </view>
+  </i-step>
+  <i-step status="process">
+    <view slot="title">
+      进行中
+    </view>
+    <view slot="content">
+      这里是该步骤的描述信息
+    </view>
+  </i-step>
+  <i-step status="">
+    <view slot="title">
+      错误
+    </view>
+    <view slot="content">
+      这里是该步骤的描述信息
+    </view>
+  </i-step>
+</i-steps>
+
+
+<view class="container">
+  <view class="userinfo">
+    <van-button type="primary" size="mini" bindtap="onClick">默认按钮</van-button>
+    <i-button type="primary" size="small" bind:click="showPopup">打开时间选择器</i-button>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取头像昵称</button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
+
+<z-notify id="z-notify"></z-notify>
+
+
+  <!--<z-date-picker bind:click="onClick" visible="{{visible}}" bind:close="onClick"></z-date-picker>-->
+
+  <!-- <mp-dialog title="test" show="{{true}}" bindbuttontap="tapDialogButton" buttons="{{[{text: '取消', value: 0}]}}">
+      <view>test content</view>
+  </mp-dialog> -->
+
+  {{ currentDate }}
+<van-button type="primary" size="mini" bindtap="start">开始</van-button>
+<van-button type="primary" size="mini" bindtap="pause">暂停</van-button>
+<van-button type="primary" size="mini" bindtap="reset">结束</van-button>
+
+<van-count-down
+  use-slot
+  time="{{ time }}"
+  millisecond
+  format="HH:mm:ss:SSS"
+  bind:change="onChange"
+  auto-start="{{ false }}"
+  bind:finish="finished"
+  class="control-count-down"
+>
+  <text class="item">{{ timeData.minutes }}:</text>
+  <text class="item">{{ timeData.seconds }}:</text>
+  <text class="item">{{ timeData.milliseconds }}</text>
+</van-count-down>
+
+<z-datetime
+  visible="{{ visible }}"
+  min-date="{{ minDate }}"
+  bind:input="onInput"
+  bind:close="onClose"
+  value="{{ currentDate }}"
+>
+  <view slot="header" style="text-align: center;">
+    我是头部
+  </view>
+  <view slot="footer" style="text-align: center;">
+    我是底部
+  </view>
+</z-datetime>
+
+  <!--  {{currentDate}}-->
+  <!--<van-popup-->
+  <!--  show="{{ visible }}"-->
+  <!--  bind:close="onClose"-->
+  <!--  position="bottom"-->
+  <!--  custom-class="z-popup"-->
+  <!--&gt;-->
+  <!--  <van-datetime-picker-->
+  <!--    type="datetime"-->
+  <!--    value="{{ currentDate }}"-->
+  <!--    bind:input="onInput"-->
+  <!--    show-toolbar="{{false}}"-->
+  <!--    active-class="z-active-class"-->
+  <!--  />-->
+  <!--</van-popup>-->

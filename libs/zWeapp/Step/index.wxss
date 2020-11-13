@@ -1,0 +1,109 @@
+.z-step-item {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  padding-left: 10rpx;
+  vertical-align: bottom;
+  padding-bottom: 16rpx;
+}
+
+/* 完成 */
+.z-step-finish .z-step-icon {
+  border-color: #fff;
+  color: #fff;
+  background: #51AFA3;
+}
+
+.z-step-finish .z-step-item-main {
+  color: #51AFA3;
+}
+
+/* 进行中 */
+.z-step-process .z-step-icon {
+  border-color: #C7E6E2;
+  color: #fff;
+  background: #fff;
+}
+
+.z-step-process .z-step-item-main {
+  color: #A2AAB7;
+}
+
+.z-step-item-main {
+  margin-bottom: 8rpx;
+  clear: both;
+  color: #A2AAB7;
+}
+
+.z-step-item-title {
+  font-size: 24rpx;
+  font-weight: bold;
+}
+
+.z-step-item-content {
+  font-size: 18rpx;
+}
+
+.z-step-horizontal .z-step-item-main {
+  text-align: center;
+}
+
+.z-step-item-ico {
+  width: 100%;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  position: relative;
+}
+
+.z-step-icon {
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 100%;
+  background: #fff;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  border: transparent solid 6rpx;
+  font-size: 20rpx;
+}
+
+.z-step-line {
+  position: absolute;
+  left: 51%;
+  top: 18rpx;
+  width: 100%;
+  height: 6rpx;
+  background: #C7E6E2
+}
+
+.z-step-vertical.z-step-item {
+  vertical-align: top;
+}
+
+.z-step-vertical {
+  padding-bottom: 30rpx;
+}
+
+.z-step-vertical .z-step-item-ico {
+  width: 30rpx;
+  height: 100%;
+  position: absolute;
+  left: 10rpx;
+  top: 0;
+}
+
+.z-step-vertical .z-step-item-main {
+  margin-left: 56rpx;
+  margin-bottom: 0;
+  clear: initial;
+}
+
+.z-step-vertical .z-step-line {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  margin-left: 3rpx;
+  width: 6rpx;
+}

@@ -1,0 +1,32 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "zjx-weapp/Popup/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "debug": false,
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于为您提供更合适您的服务"
+    }
+  },
+  "useExtendedLib": {
+    "weui": true
+  },
+  "usingComponents": {
+    "van-button": "./libs/vant/button/index",
+    "i-button": "./libs/iView/button/index",
+    "van-datetime-picker": "./libs/vant/datetime-picker/index",
+    "van-popup": "./libs/vant/popup/index",
+    "mp-dialog": "/miniprogram_npm/weui-miniprogram/dialog/dialog",
+    "z-date-picker": "/zjx-weapp/DatePicker/index",
+    "z-datetime": "./libs/zWeapp/DateTime/index"
+  }
+}

@@ -1,0 +1,19 @@
+.z-picker-column {
+  overflow: hidden;
+  text-align: center;
+  font-size: 16rpx;
+  color: #333;
+}
+
+.z-picker-column__item {
+  padding: 0 5px
+}
+
+.z-picker-column__item--selected {
+  font-weight: 500;
+  color: #323233;
+}
+
+.z-picker-column__item--disabled {
+  opacity: .3;
+}

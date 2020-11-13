@@ -1,0 +1,54 @@
+<view
+  class="z-class z-step-item {{ parse.getClass(status, active, index) }} {{ direction === 'vertical' ? 'z-step-vertical' : 'z-step-horizontal' }}"
+  style="{{ parse.getItemStyle(len, direction) }}"
+>
+  <view class="z-step-item-main">
+    <view class="z-step-item-title">
+      <text wx:if="{{ title }}">{{ title }}</text>
+      <slot wx:else name="title"></slot>
+    </view>
+    <view class="z-step-item-content">
+      <text wx:if="{{ content }}">{{ content }}</text>
+      <slot wx:else name="content"></slot>
+    </view>
+  </view>
+
+  <view class="z-step-item-ico">
+    <view class="z-step-icon">
+      <text></text>
+      <slot name="active-icon"/>
+      <slot name="inactive-icon"/>
+    </view>
+    <view class="z-step-line" wx:if="{{ index !== len - 1}}"></view>
+  </view>
+
+</view>
+
+
+<wxs module="parse">
+  var allStatus = ['success', 'info', 'warning', 'error'];
+  module.exports = {
+    getItemStyle: function (len, direction) {
+      if (direction === 'horizontal') {
+        return 'width :' + 100 / len + '%';
+      } else {
+        return 'width : 100%;';
+      }
+    },
+    getClass: function (status, current, index) {
+      //wait、process、finish、error
+      var startClass = 'z-step-'
+      var classes = '';
+      var cindex = allStatus.indexOf(status);
+      if (cindex !== -1) {
+        classes = startClass + allStatus[cindex];
+      }
+      if (index < current) {
+        classes = startClass + 'finish';
+      } else if (index === current) {
+        classes = startClass + 'process';
+      }
+      return classes;
+    }
+  }
+</wxs>

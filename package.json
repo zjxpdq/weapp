@@ -1,0 +1,16 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "小程序组件化开发",
+  "main": "app.js",
+  "scripts": {},
+  "keywords": [
+    "js",
+    "weapp",
+    "zjxpdq"
+  ],
+  "author": "zjxpdq",
+  "license": "ISC",
+  "dependencies": {
+  }
+}

@@ -1,0 +1,17 @@
+<wxs module="utils" src="../Wxs/bem.wxs"/>
+
+<z-overlay
+  wx:if="{{ overlay }}"
+  visible="{{ visible }}"
+  z-index="{{ zIndex }}"
+  custom-style="{{ overlayStyle }}"
+  bind:click="onClickOverlay"
+/>
+
+<view
+  wx:if="{{ initEd }}"
+  class="z-class {{ utils.bem('popup', [position, {round, safe: safeAreaInsetBottom, safeTop: safeAreaInsetTop}]) }} {{ classes }}"
+  style="z-index: {{zIndex}}; {{ customStyle }}"
+>
+  <slot/>
+</view>

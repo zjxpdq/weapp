@@ -1,0 +1,8 @@
+<view
+  bindtap="onClick"
+  bindtouchmove="noop"
+  class="z-overlay-mask z-class-mask {{ visible ? 'z-overlay-mask-show' : '' }} {{ classes }}"
+  style="z-index: {{ zIndex }}; {{ customStyle }}; transition-duration: {{ duration }}ms;"
+>
+  <slot/>
+</view>

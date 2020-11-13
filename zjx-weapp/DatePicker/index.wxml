@@ -1,0 +1,50 @@
+<!--components/DatePicker.wxml-->
+<z-popup position="bottom" visible="{{ visible }}">
+  <view class="z-dp">
+    <view class="z-dp-header">
+      <slot name="header"/>
+    </view>
+    <view class="z-dp-actions">
+
+      <z-picker columns="{{ columns }}" bind:change="onChange"></z-picker>
+
+      <!--      <picker-view-->
+      <!--        indicator-class="z-dp-active-item"-->
+      <!--        style="width: 100%; height: 100%;"-->
+      <!--        value="{{value}}"-->
+      <!--        bindchange="bindChange"-->
+      <!--        indicator-style="height: 96rpx;border: none;"-->
+      <!--      >-->
+      <!--        <picker-view-column-->
+      <!--          -->
+      <!--        >-->
+      <!--          <view-->
+      <!--            wx:for="{{years}}"-->
+      <!--            wx:key="{{years}}"-->
+      <!--          >-->
+      <!--            {{item}}年-->
+      <!--          </view>-->
+      <!--        </picker-view-column>-->
+      <!--        <picker-view-column>-->
+      <!--          <view-->
+      <!--            wx:for="{{months}}"-->
+      <!--            wx:key="{{months}}"-->
+      <!--          >-->
+      <!--            {{item}}月-->
+      <!--          </view>-->
+      <!--        </picker-view-column>-->
+      <!--        <picker-view-column>-->
+      <!--          <view-->
+      <!--            wx:for="{{days}}"-->
+      <!--            wx:key="{{days}}"-->
+      <!--          >-->
+      <!--            {{item}}日-->
+      <!--          </view>-->
+      <!--        </picker-view-column>-->
+      <!--      </picker-view>-->
+    </view>
+    <view class="z-dp-cancel">
+      <slot name="footer"/>
+    </view>
+  </view>
+</z-popup>

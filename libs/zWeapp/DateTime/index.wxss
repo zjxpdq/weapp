@@ -1,0 +1,13 @@
+.z-popup {
+  padding-top: 20px;
+}
+
+.z-popup-center {
+  padding-left: 38px;
+  padding-right: 38px;
+}
+
+.z-data-time-active {
+  color: #51AFA3;
+}
+

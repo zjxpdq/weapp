@@ -1,0 +1,56 @@
+@import './libs/vant/common/index.wxss';
+
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+/*.van-picker__mask {*/
+/*  background: #000 !important;*/
+/*}*/
+
+/* 时间选项样式 */
+.z-data-time .van-picker-column__item {
+  font-size: 14px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 600;
+  color: #A2AAB7;
+}
+
+/* 选中的时间样式 */
+.z-data-time .DateTime-index--z-data-time-active {
+  background: rgba(199, 230, 226, 0.1);
+  color: #51AFA3;
+}
+
+/* 时间选择器遮罩层样式 */
+.z-data-time .van-picker__mask {
+  background-image: none !important;
+  background-color: rgba(243, 243, 243, .3);
+}
+
+/* 时间选择器选中遮罩样式 */
+.z-data-time .van-picker__frame {
+  border: 1px solid #C7E6E2;
+  left: 0;
+  right: 0;
+}
+.z-data-time .van-picker__frame::after {
+  display: block;
+  width: 4px;
+  border-radius: 4px;
+  background: #51AFA3;
+  top: -6px;
+  bottom: -6px;
+  left: -1px;
+}
+
+/*.z-data-time .van-picker__mask {*/
+/*  background: #000 !important;*/
+/*}*/

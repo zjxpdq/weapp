@@ -1,0 +1,11 @@
+<view
+  class="z-notify z-class {{ visible ? 'z-notify-show' : '' }} z-notify--{{ type }}"
+  style="z-index: {{ zIndex }}; top: {{ top }}; width: {{ width }}; background: {{ background }}; color: {{ color }};"
+>
+  <view class="z-notify-center">
+    <view wx:if="{{ !!type }}" class="z-notify-icon z-notify-icon-{{ type }}"></view>
+    <view class="z-notify-text">
+      {{ msg }}
+    </view>
+  </view>
+</view>

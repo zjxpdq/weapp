@@ -1,0 +1,46 @@
+<view class="z-picker">
+  <view class="z-picker-header">
+    <slot name="header"/>
+  </view>
+  <view
+    class="z-picker__columns"
+    catchtouchmove="noop"
+    style="height: {{ visibleItemCount * itemHeight }}rpx"
+  >
+    <!--<z-picker-column
+      class="z-picker__column"
+      wx:for="{{ isSimple(columns) ? [columns] : columns }}"
+      wx:key="index"
+      data-index="{{ index }}"
+      custom-class="column-class"
+      value-key="{{ valueKey }}"
+      initial-options="{{ isSimple(columns) ? item : item.values }}"
+      default-index="{{ item.defaultIndex || defaultIndex }}"
+      visible-item-count="{{ visibleItemCount }}"
+      item-height="{{ itemHeight }}"
+      active-class="active-class"
+      bind:change="onChange"
+    />-->
+    <z-picker-column
+      class="z-picker__column"
+      wx:for="{{ isSimple(columns) ? [columns] : columns }}"
+      wx:key="index"
+      data-index="{{ index }}"
+      custom-class="column-class"
+      value-key="{{ valueKey }}"
+      initial-options="{{ isSimple(columns) ? item : item.values }}"
+      default-index="{{ item.defaultIndex || defaultIndex }}"
+      item-height="{{ itemHeight }}"
+      visible-item-count="{{ visibleItemCount }}"
+      active-class="active-class"
+      bind:change="onChange"
+    />
+  </view>
+</view>
+
+<wxs module="isSimple">
+  function isSimple(columns) {
+    return columns.length && !columns[0].values;
+  }
+  module.exports = isSimple;
+</wxs>

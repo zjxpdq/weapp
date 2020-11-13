@@ -1,0 +1,33 @@
+<van-popup
+  show="{{ visible }}"
+  bind:close="onClose"
+  position="bottom"
+  custom-class="z-popup"
+  overlay-style="background: #18191A;opacity: 0.5;"
+  custom-style="border-radius: {{ radiusSize }}rpx {{ radiusSize }}rpx 0 0;"
+  closeable="{{ closeable }}"
+>
+  <slot name="header"/>
+  <view class="z-popup-center">
+    <van-datetime
+      type="{{ type }}"
+      value="{{ currentDate }}"
+      bind:input="onInput"
+      show-toolbar="{{false}}"
+      active-class="z-data-time-active"
+      column-class="z-date-column"
+      class="z-data-time"
+      item-height="{{ itemHeight }}"
+      visible-item-count="{{ visibleItemCount }}"
+      formatter="{{ formatter }}"
+      max-date="{{ maxDate }}"
+      min-date="{{ minDate }}"
+      min-hour="{{ minHour }}"
+      max-hour="{{ maxHour }}"
+      min-minute="{{ minMinute }}"
+      max-minute="{{ maxMinute }}"
+      filter="{{ filter }}"
+    />
+  </view>
+  <slot name="footer"/>
+</van-popup>

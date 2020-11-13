@@ -1,0 +1,20 @@
+.z-picker {
+  position: relative;
+  overflow: hidden;
+  -webkit-text-size-adjust: 100%;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: #fff;
+}
+
+.z-picker__columns {
+  position: relative;
+  display: -webkit-flex;
+  display: flex
+}
+
+.z-picker__column {
+  -webkit-flex: 1 1;
+  flex: 1 1;
+  width: 0
+}

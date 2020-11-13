@@ -1,0 +1,38 @@
+var array = require('./array.wxs')
+var object = require('./object.wxs')
+var PREFIX = 'z-'
+
+function Join(name, mods) {
+  name = PREFIX + name
+  mods = mods.map(function (mod) {
+    return name + '--' + mod
+  })
+  mods.unshift(name)
+  return mods.join(' ')
+}
+
+function Traversing(mods, conf) {
+  if (!conf) {
+    return
+  }
+
+  if (typeof conf === 'string' || typeof conf === 'number') {
+    mods.push(conf)
+  } else if (array.isArray(conf)) {
+    conf.forEach(function (item) {
+      Traversing(mods, item)
+    })
+  } else if (typeof conf === 'object') {
+    object.keys(conf).forEach(function (key) {
+      conf[key] && mods.push(key)
+    })
+  }
+}
+
+function bem(name, conf) {
+  var mods = []
+  Traversing(mods, conf)
+  return Join(name, mods)
+}
+
+module.exports.bem = bem

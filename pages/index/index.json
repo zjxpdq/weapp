@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "z-popup": "../../zjx-weapp/Popup/index",
+    "van-count-down": "../../libs/vant/count-down/index",
+    "z-notify": "../../libs/zWeapp/Notify/index",
+    "z-steps": "../../libs/zWeapp/Steps/index",
+    "z-step": "../../libs/zWeapp/Step/index",
+    "i-steps": "../../libs/iView/steps/index",
+    "i-step": "../../libs/iView/step/index"
+  }
+}

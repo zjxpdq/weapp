@@ -1,0 +1,3 @@
+<view class="z-class z-steps" style="background: {{ background }}">
+  <slot/>
+</view>

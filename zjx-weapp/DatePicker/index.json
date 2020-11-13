@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "z-popup": "../Popup/index",
+    "z-picker": "../Picker/index"
+  }
+}

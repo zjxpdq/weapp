@@ -1,0 +1,5 @@
+.z-steps {
+  width: 100%;
+  padding-top: 18rpx;
+  padding-bottom: 18rpx;
+}
