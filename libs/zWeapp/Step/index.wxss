@@ -15,7 +15,7 @@
 }
 
 .z-step-finish .z-step-item-main {
-  color: #51AFA3;
+  /*color: #51AFA3;*/
 }
 
 /* 进行中 */
@@ -26,21 +26,23 @@
 }
 
 .z-step-process .z-step-item-main {
-  color: #A2AAB7;
+  /*color: #A2AAB7;*/
 }
 
 .z-step-item-main {
   margin-bottom: 8rpx;
   clear: both;
-  color: #A2AAB7;
+  /*color: #A2AAB7;*/
 }
 
 .z-step-item-title {
+  color: inherit;
   font-size: 24rpx;
   font-weight: bold;
 }
 
 .z-step-item-content {
+  color: inherit;
   font-size: 18rpx;
 }
 
@@ -59,6 +61,7 @@
 .z-step-icon {
   width: 30rpx;
   height: 30rpx;
+  overflow: hidden;
   border-radius: 100%;
   background: #fff;
   position: relative;

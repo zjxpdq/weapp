@@ -14,6 +14,15 @@ Component({
     background: {
       type: String,
       value: 'rgba(199, 230, 226, 0.15)'
+    },
+    showNumber: Boolean,
+    activeTextColor: {
+      type: String,
+      value: '#51AFA3'
+    },
+    inactiveTextColor: {
+      type: String,
+      value: '#A2AAB7'
     }
   },
   relations: {
@@ -40,7 +49,10 @@ Component({
             len,
             index,
             active: this.data.active,
-            direction: this.data.direction
+            direction: this.data.direction,
+            showNumber: this.data.showNumber,
+            activeTextColor: this.data.activeTextColor,
+            inactiveTextColor: this.data.inactiveTextColor
           })
         })
       }

@@ -2,7 +2,7 @@
   class="z-class z-step-item {{ parse.getClass(status, active, index) }} {{ direction === 'vertical' ? 'z-step-vertical' : 'z-step-horizontal' }}"
   style="{{ parse.getItemStyle(len, direction) }}"
 >
-  <view class="z-step-item-main">
+  <view class="z-step-item-main" style="color: {{ index < active ? activeTextColor : inactiveTextColor }}">
     <view class="z-step-item-title">
       <text wx:if="{{ title }}">{{ title }}</text>
       <slot wx:else name="title"></slot>
@@ -15,9 +15,9 @@
 
   <view class="z-step-item-ico">
     <view class="z-step-icon">
-      <text></text>
-      <slot name="active-icon"/>
-      <slot name="inactive-icon"/>
+      <text wx:if="{{ showNumber }}">{{ index + 1 }}</text>
+      <slot name="active-icon" wx:if="{{ index < active }}"/>
+      <slot name="inactive-icon" wx:else/>
     </view>
     <view class="z-step-line" wx:if="{{ index !== len - 1}}"></view>
   </view>

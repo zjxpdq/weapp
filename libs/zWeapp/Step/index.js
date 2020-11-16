@@ -21,10 +21,6 @@ Component({
     content: {
       type: String,
       value: ''
-    },
-    icon: {
-      type: String,
-      value: ''
     }
   },
   data: {
@@ -35,7 +31,10 @@ Component({
     // parent component select current index
     active: 0,
     // css direction
-    direction: 'horizontal'
+    direction: 'horizontal',
+    showNumber: false,
+    activeTextColor: '#51AFA3',
+    inactiveTextColor: '#A2AAB7'
   },
   methods: {
     updateDataChange(options) {
@@ -43,7 +42,10 @@ Component({
         len: options.len,
         index: options.index,
         active: options.active,
-        direction: options.direction
+        direction: options.direction,
+        showNumber: options.showNumber,
+        activeTextColor: options.activeTextColor,
+        inactiveTextColor: options.inactiveTextColor
       })
     }
   }

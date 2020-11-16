@@ -1,7 +1,7 @@
 <!--index.wxml-->
 
 
-<z-steps active="{{ 1 }}" direction="vertical">
+<z-steps active="{{ 1 }}">
   <z-step title="NO1" content="内容"/>
   <z-step>
     <view slot="title">我是头部</view>
