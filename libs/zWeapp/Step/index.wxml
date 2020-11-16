@@ -45,7 +45,7 @@
       }
       if (index < current) {
         classes = startClass + 'finish';
-      } else if (index === current) {
+      } else {
         classes = startClass + 'process';
       }
       return classes;

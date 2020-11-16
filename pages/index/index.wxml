@@ -1,11 +1,12 @@
 <!--index.wxml-->
 
 
-<z-steps active="{{ 1 }}">
+<z-steps active="{{ 2 }}">
   <z-step title="NO1" content="内容"/>
-  <z-step>
-    <view slot="title">我是头部</view>
-  </z-step>
+  <z-step title="NO2" content="内容"/>
+  <z-step title="NO3" content="内容"/>
+  <z-step title="NO4" content="内容"/>
+  <z-step title="NO5" content="内容"/>
 </z-steps>
 
 <i-steps direction="vertical">
